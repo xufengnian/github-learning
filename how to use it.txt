@@ -1,65 +1,67 @@
 how to use github?
-1.����һЩ���ʺ͸���
-branch  ��֧��Ĭ����master,�����Լ�������
-repository  �ֿ⣬���ڴ����Ҫ�ϴ����ļ�
-github�����Ͼ��Ǳ��غ�Զ�̵������໥������������push��Զ��,Զ����pull������
+1.明白一些单词和概念
+branch  分支，默认是master,可以自己建立的
+repository  仓库，用于存放想要上传的文件
+github本质上就是本地和远程的数据相互交换，本地新push到远程,远程新pull到本地
 
-2.����ϴ��Լ��Ĵ����أ�
-����Ҫ�����÷�֧��Ҳ����branch���������⣬�������µĻ�Ĭ��ʹ��master
-Ȼ���ڷ�֧�½����ֿ�repository���������⣬��������½���������Ϊ
-����public��˽��private������������test,������ɺ󣬵�ַ����
-https://github.com/username/test.git  ����username����github�û���
-�õģ�����Ϊֹ�����Ѿ�������һ��github�ֿ�����������test
+2.如何上传自己的代码呢？
+首先要建立好分支，也就是branch，名字随意，不建立新的话默认使用master
+然后在分支下建立仓库repository，名字随意，这个必需新建，可设置为
+公开public和私密private，比如起名叫test,建立完成后，地址就是
+https://github.com/username/test.git  其中username就是github用户名
+好的，到此为止咱们已经建立好一个github仓库啦，名字是test
 
-githubÿ���ֿ�Ĭ��Ӧ����һ����ΪREADME.md���ļ�����˵���ֿ��ļ�������Ϣ
+github每个仓库默认应该有一个名为README.md的文件用于说名仓库文件大致信息
 
-���˼�Ȼ����Ҫ�ϴ��ļ�����ô����Ӧ�ý����ñ����ļ��ͱ����ļ��Ĳֿ�
-����������D�̸�Ŀ¼�£��½�test�ļ�����Ϊ���زֿ⣨���ֲ�һ��Ҫ��Զ�ֿ̲���ͬ��
-���ǹ涨�£��Ժ���Ҫ�ϴ���testԶ�ֿ̲���ļ�����ȫ�����ڱ���testĿ¼��
+好了既然我们要上传文件，那么首先应该建立好本地文件和本地文件的仓库
+比如我们在D盘根目录下，新建test文件夹作为本地仓库（名字不一定要和远程仓库相同）
+我们规定下：以后需要上传到test远程仓库的文件现在全部放在本地test目录下
 
-����ʹ��gitbash����������ڹ�����������һ�¼���Ͷ��ʹ�ã��������һ�£�
+我们使用gitbash这款软件用于管理，简单配置一下即可投入使用（不会的搜一下）
 
-3.���ǽ��뱾��test�ļ����У��һ�ѡ��git bash here������linux�ն˽���
-��������
-echo "# test" >> README.md  //��ǰ�ļ��У���д��#
-//test��README.md�ļ��У������ڵĻ����½�README.md�ļ���д��
+3.我们进入本地test文件夹中，右击选择git bash here出现类linux终端界面
+依次输入
+echo "# test" >> README.md  //当前文件夹，下写入#
+//test到README.md文件中，不存在的话，新建README.md文件并写入
 
-git init	//��ʼ�����زֿ�
+git init	//初始化本地仓库
 
-git add README.md	//����README.md�ļ�
+git add README.md	//添加README.md文件
 
-git commit -m "first commit"	//�ύ�ύԭ����Ϣ
+git commit -m "first commit"	//提交提交原因信息
 
 git remote add origin https://github.com/username/test.git
-//Զ��test�ֿ��ַ����
-git push -u origin master	//��ʼ�ϴ�
+//远程test仓库地址设置
+git push -u origin master	//开始上传
 
-��ô��һ��README.md�ļ��ͳɹ��ϴ�
+那么第一个README.md文件就成功上传
 
-4.֮����Ҫ�ϴ���ô�죿
-����test�ļ�����������������Ϊtest2.txt���ļ���ô�ϴ��أ�
-��ʵҲ�ܼ�
-�Ҽ�test�ļ��У�ѡ��git GUI here ��ͼ�ν����������
-���һ��Ҫ����location,���ǲֿ��ַhttps://github.com/username/test.git
+4.之后想要上传怎么办？
+比如test文件夹下又添加了名字为test2.txt的文件怎么上传呢？
+其实也很简单
+右键test文件夹，选择git GUI here 以图形界面管理即可
+最后一步要输入location,就是仓库地址https://github.com/username/test.git
 
-5.���ɾ��Զ�ֿ̲⣿���ɾ���ֿ���ļ��к��ļ����µ��ļ�
-Զ�ֿ̲�ɾ������ֱ����github��ҳ�ϵ�setting����в���
+5.如何删除远程仓库？如何删除仓库的文件夹和文件夹下的文件
+远程仓库删除可以直接在github网页上的setting里进行操作
 
-���ɾ���ֿ���ļ��к��ļ����µ��ļ��أ�
-Ϊ�˱�֤���زֿ��Զ�ֿ̲��һ���ԣ����ǵ�ɾ���������ȱ���ִ��Ȼ��Զ��ִ��
-����������Ҫɾ��Զ�ֿ̲����testdocument�ļ��У����ȼ������Ǳ��زֿ��������ļ��У��ļ����´�git bash
+如何删除仓库的文件夹和文件夹下的文件呢？
+为了保证本地仓库和远程仓库的一致性，我们的删除操作是先本地执行然后远程执行
+假设我们需要删除远程仓库里的testdocument文件夹，首先假设我们本地仓库存有这个文件夹，文件夹下打开git bash
 
-a.git rm testdocument -rf	//ִ�������Ժ󱾵زֿ���ļ�����ʧ
-b.git commit -m "delete testdocument"  //׼���ύԭ���ֿ�ɾ������
-c.git push origin master  //�ύ��֧���ɣ�ǰ��òֿ���master��֧�£�
-ɾ���ļ���������
+a.git rm testdocument -rf	//执行完了以后本地仓库该文件夹消失(注意文件名问题详见第7点)
+b.git commit -m "delete testdocument"  //准备提交原创仓库删除操作
+c.git push origin master  //提交分支即可（前提该仓库在master分支下）
+删除文件操作类似
 
-5.���ͬ��Զ�ֿ̲⵽�����أ�
-a.������½��ֿ�ʱ��git bash �����˳�ʼ����ָ����ôֱ��git pull����
-b.����½��ֿ��ʹ��git GUI�������زֿ⣬��û�г�ʼ������ôͬ��ʱ��Ҫ
-��git bash����
+5.如何同步远程仓库到本地呢？
+a.如果你新建仓库时在git bash 输入了初始化的指令那么直接git pull即可
+b.如果新建仓库后使用git GUI建立本地仓库，而没有初始化，那么同步时需要
+打开git bash输入
 git pull https://github.com/username/test.git master
-��git pull �ֿ��ַ  ��֧��
+即git pull 仓库地址  分支名
 
-6.�鿴��ָ֧��
+6.查看分支指令
 git branch -a
+
+7.文件名称注意，git bash对空格，单引号，括号等符号无法识别，输入时记得在这些特殊符号前添加转义字符\
