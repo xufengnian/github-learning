@@ -30,6 +30,36 @@ git add README.md	//添加README.md文件
 
 git commit -m "first commit"	//提交提交原因信息
 
-git remote add origin https://github.com/xufengnian/test.git
+git remote add origin https://github.com/username/test.git
 //远程test仓库地址设置
 git push -u origin master	//开始上传
+
+那么第一个README.md文件就成功上传
+
+4.之后想要上传怎么办？
+比如test文件夹下又添加了名字为test2.txt的文件怎么上传呢？
+其实也很简单
+右键test文件夹，选择git GUI here 以图形界面管理即可
+最后一步要输入location,就是仓库地址https://github.com/username/test.git
+
+5.如何删除远程仓库？如何删除仓库的文件夹和文件夹下的文件
+远程仓库删除可以直接在github网页上的setting里进行操作
+
+如何删除仓库的文件夹和文件夹下的文件呢？
+为了保证本地仓库和远程仓库的一致性，我们的删除操作是先本地执行然后远程执行
+假设我们需要删除远程仓库里的testdocument文件夹，首先假设我们本地仓库存有这个文件夹，文件夹下打开git bash
+
+a.git rm testdocument -rf	//执行完了以后本地仓库该文件夹消失
+b.git commit -m "delete testdocument"  //准备提交原创仓库删除操作
+c.git push origin master  //提交分支即可（前提该仓库在master分支下）
+删除文件操作类似
+
+5.如何同步远程仓库到本地呢？
+a.如果你新建仓库时在git bash 输入了初始化的指令那么直接git pull即可
+b.如果新建仓库后使用git GUI建立本地仓库，而没有初始化，那么同步时需要
+打开git bash输入
+git pull https://github.com/username/test.git master
+即git pull 仓库地址  分支名
+
+6.查看分支指令
+git branch -a
