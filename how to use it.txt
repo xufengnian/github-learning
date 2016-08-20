@@ -1,6 +1,6 @@
 how to use github?
 1.明白一些单词和概念
-branch  分支，默认是master,可以自己建立
+branch  分支，默认是master,可以自己建立的
 repository  仓库，用于存放想要上传的文件
 github本质上就是本地和远程的数据相互交换，本地新push到远程,远程新pull到本地
 
