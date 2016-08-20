@@ -1,0 +1,22 @@
+how to use github?
+1.明白一些单词和概念
+branch  分支，默认是master,可以自己建立
+repository  仓库，用于存放想要上传的文件
+github本质上就是本地和远程的数据相互交换，本地新push到远程,远程新pull到本地
+
+2.如何上传自己的代码呢？
+首先要建立好分支，也就是branch，名字随意，不建立新的话默认使用master
+然后在分支下建立仓库repository，名字随意，这个必需新建，可设置为
+公开public和私密private，比如起名叫test,建立完成后，地址就是
+https://github.com/username/test.git  其中username就是github用户名
+好的，到此为止咱们已经建立好一个github仓库啦，名字是test
+
+github每个仓库默认应该有一个名为README.md的文件用于说名仓库文件大致信息
+
+好了既然我们要上传文件，那么首先应该建立好本地文件和本地文件的仓库
+比如我们在D盘根目录下，新建test文件夹作为本地仓库（名字不一定要和远程仓库相同）
+我们规定下：以后需要上传到test远程仓库的文件现在全部放在本地test目录下
+
+我们使用gitbash这款软件用于管理，简单配置一下即可投入使用（不会的搜一下）
+
+3.我们进入本地test文件夹中，右击选择git bash here出现类linux终端界面
