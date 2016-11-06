@@ -1,4 +1,4 @@
-how to use github?
+﻿how to use github?
 1.明白一些单词和概念
 branch  分支，默认是master,可以自己建立的
 repository  仓库，用于存放想要上传的文件
@@ -24,17 +24,40 @@ github每个仓库默认应该有一个名为README.md的文件用于说名仓�
 echo "# test" >> README.md  //当前文件夹，下写入#
 //test到README.md文件中，不存在的话，新建README.md文件并写入
 
-git init	//初始化本地仓库
+git init	//初始化本地仓库，生成.git隐藏文件夹
 
 git add README.md	//添加README.md文件
 
-git commit -m "first commit"	//提交提交原因信息
+git commit -m "first commit"	//提交提交原因信息
 
 git remote add origin https://github.com/username/test.git
 //远程test仓库地址设置
 git push -u origin master	//开始上传
 
 那么第一个README.md文件就成功上传
+补充：
+Linux下的git如何上传？
+步骤都类似，且linux自带git工具，免去了安装
+先建立远程仓库，然后在linux中选择合适的文件夹，打开终端
+依次输入
+echo "# test" >> README.md  //当前文件夹，下写入#
+//test到README.md文件中，不存在的话，新建README.md文件并写入
+
+git init	//初始化本地仓库从，生成.git隐藏文件夹
+
+git add README.md	//添加README.md文件
+
+git config --global user.email "you@example.com"//配置git全局变量,告诉git你的github邮箱名
+
+git config --global user.name "Your Name"//配置git全局变量,告诉git你的github用户名
+
+git commit -m "first commit"	//提交提交原因信息
+
+git remote add origin https://github.com/username/test.git
+//远程test仓库地址设置
+git push -u origin master	//开始上传
+
+P.S:github不能上传空文件夹，即使git init，生成.git隐藏文件夹了，也是空的，所以建立一个README.md文件可以防止上传空文件出错
 
 4.之后想要上传怎么办？
 比如test文件夹下又添加了名字为test2.txt的文件怎么上传呢？
