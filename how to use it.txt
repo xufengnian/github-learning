@@ -36,10 +36,15 @@ git push -u origin master	//开始上传
 
 那么第一个README.md文件就成功上传
 补充：
+
 Linux下的git如何上传？
 步骤都类似，且linux自带git工具，免去了安装
 先建立远程仓库，然后在linux中选择合适的文件夹，打开终端
 依次输入
+git config --global user.email "you@example.com"//配置git全局变量,告诉git你的github邮箱名
+
+git config --global user.name "Your Name"//配置git全局变量,告诉git你的github用户名
+
 echo "# test" >> README.md  //当前文件夹，下写入#
 //test到README.md文件中，不存在的话，新建README.md文件并写入
 
@@ -47,17 +52,41 @@ git init	//初始化本地仓库从，生成.git隐藏文件夹
 
 git add README.md	//添加README.md文件
 
-git config --global user.email "you@example.com"//配置git全局变量,告诉git你的github邮箱名
-
-git config --global user.name "Your Name"//配置git全局变量,告诉git你的github用户名
-
 git commit -m "first commit"	//提交提交原因信息
 
 git remote add origin https://github.com/username/test.git
 //远程test仓库地址设置
 git push -u origin master	//开始上传
 
+后续添加文件了，在该文件夹打开terminal,输入
+法一：
+git commit -a 
+出现vim界面，在其中写入相应变动信息
+
+git push origin master(参数有无-u均可)
+法二：
+git add filename1 filename 2 ...
+
+git commit -m "xxxx"
+
+git push origin master(参数有无-u均可)
+
+后续删除文件了怎么办呢？
+
+git commit -a 
+出现vim界面，在其中写入相应变动信息
+
+git push origin master(参数有无-u均可)
+
+后续修改文件了怎么办？
+
+git commit -a 
+出现vim界面，在其中写入相应变动信息
+
+git push origin master(参数有无-u均可)
+
 P.S:github不能上传空文件夹，即使git init，生成.git隐藏文件夹了，也是空的，所以建立一个README.md文件可以防止上传空文件出错
+且linux下似乎上传的文件名不能包含中文，以上方法windows下也能使用，打开git bash here输入即可
 
 4.之后想要上传怎么办？
 比如test文件夹下又添加了名字为test2.txt的文件怎么上传呢？
