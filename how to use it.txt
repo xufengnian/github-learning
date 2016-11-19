@@ -1,4 +1,4 @@
-﻿how to use github?
+﻿how to use github?
 1.明白一些单词和概念
 branch  分支，默认是master,可以自己建立的
 repository  仓库，用于存放想要上传的文件
@@ -87,6 +87,14 @@ git push origin master(参数有无-u均可)
 
 P.S:github不能上传空文件夹，即使git init，生成.git隐藏文件夹了，也是空的，所以建立一个README.md文件可以防止上传空文件出错
 且linux下似乎上传的文件名不能包含中文，以上方法windows下也能使用，打开git bash here输入即可
+
+如果后续同时修改和添加了文件怎么办？
+1.git commit -a 	//写下修改的原因
+2.git push origin master	//提交修改
+3.git add newfile1 newfile2...	//添加新增的文件
+4.git commit -a 	//写下新增文件的原因
+5.git push origin master 	//提交新增
+
 
 4.之后想要上传怎么办？
 比如test文件夹下又添加了名字为test2.txt的文件怎么上传呢？
